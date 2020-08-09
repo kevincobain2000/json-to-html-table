@@ -11,7 +11,7 @@ https://medium.com/web-developer/convert-nested-json-to-html-table-react-javascr
 ## Install
 
 ```bash
-npm install --save json-to-html-table
+npm install --save @kevincobain2000/json-to-html-table
 ```
 
 ## Usage

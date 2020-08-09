@@ -1,5 +1,5 @@
 {
-  "name": "json-to-html-table",
+  "name": "@kevincobain2000/json-to-html-table",
   "version": "1.0.0",
   "description": "Convert Nested JSON to HTML Table — React, Javascript.",
   "author": "Pulkit Kathuria",
