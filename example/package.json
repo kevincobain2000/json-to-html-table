@@ -1,0 +1,21 @@
+{
+  "name": "json-to-html-table-example",
+  "homepage": "https://medium.com/web-developer/convert-nested-json-to-html-table-react-javascript-be6611fed718",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "json-to-html-table": "link:..",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
