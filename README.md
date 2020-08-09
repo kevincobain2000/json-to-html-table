@@ -50,7 +50,7 @@ class Example extends Component {
         ]
     }
     return (
-      <JSONToHTMLTable data={data} className="" tableClassName="table table-sm"/>
+      <JSONToHTMLTable data={data} tableClassName="table table-sm"/>
     )
   }
 }

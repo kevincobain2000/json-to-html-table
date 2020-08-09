@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {JSONToHTMLTable} from 'json-to-html-table'
+import {JSONToHTMLTable} from '@kevincobain2000/json-to-html-table'
 import "bootstrap/dist/css/bootstrap.css"
 
 export const App = () => {

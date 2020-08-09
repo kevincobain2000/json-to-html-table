@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@kevincobain2000/json-to-html-table@link:..":
+  version "0.0.0"
+  uid ""
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -4672,10 +4676,6 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
-
-"json-to-html-table@link:..":
-  version "0.0.0"
-  uid ""
 
 json3@^3.3.2:
   version "3.3.3"

@@ -4,3 +4,8 @@
 yarn install
 npm start
 ```
+
+```sh
+cd ../
+npm run build
+```
