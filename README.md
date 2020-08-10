@@ -19,7 +19,7 @@ npm install --save @kevincobain2000/json-to-html-table
 ```jsx
 import React, { Component } from 'react'
 
-import JSONToHTMLTable from 'json-to-html-table'
+import { JSONToHTMLTable } from '@kevincobain2000/json-to-html-table'
 
 class Example extends Component {
   render () {
