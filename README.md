@@ -8,6 +8,10 @@ for more info see
 
 https://medium.com/web-developer/convert-nested-json-to-html-table-react-javascript-be6611fed718
 
+# Use it Online
+
+Online tool https://kevincobain2000.github.io/json-to-html-table/
+
 ## Install
 
 ```bash
