@@ -1,10 +1,23 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import {JSONToHTMLTable} from '@kevincobain2000/json-to-html-table'
-import "bootstrap/dist/css/bootstrap.css"
+import ReactDOMServer from "react-dom/server";
 
 export const App = () => {
-  const data = {
+  const handleChangeData = (event) => {
+  console.log('event :', event);
+    console.log("handle change")
+    let data
+    try {
+      data = JSON.parse(event.target.value)
+    } catch (error) {
+      data = {}
+    }
+    setData(data)
+    console.log('data :', data);
+    console.log('ReactDOMServer :', ReactDOMServer.renderToString(renderTable));
+  }
+  const [data, setData] = useState({
     "id": "0001",
     "type": "donut",
     "name": "Cake",
@@ -29,11 +42,26 @@ export const App = () => {
         { "id": "5003", "type": "Chocolate" },
         { "id": "5004", "type": "Maple" }
       ]
-  }
+  })
+  const renderTable = (
+    <JSONToHTMLTable data={data} tableClassName="table table-condensed table-sm" />
+  )
 
   return (
-    <div className='pt-2 pb-2'>
-      <JSONToHTMLTable data={data} tableClassName="table table-condensed table-sm" />
+    <div className="container">
+        <h1 class="text-center">
+          Json to HTML Table Converter - Online tool
+      </h1>
+      <div className='pt-2 pb-2'>
+        <textarea
+          defaultValue={JSON.stringify(data)}
+          onChange={handleChangeData}
+          placeholder="Write or paste your code here..."
+          className="text-md" id="textarea-code" cols="30" rows="10"></textarea>
+        <br/>
+        <br/>
+        {renderTable}
+      </div>
     </div>
   )
 }
