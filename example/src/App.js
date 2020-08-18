@@ -1,23 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import CodeMirror from 'react-codemirror';
 
 import {JSONToHTMLTable} from '@kevincobain2000/json-to-html-table'
 import ReactDOMServer from "react-dom/server";
 
 export const App = () => {
-  const handleChangeData = (event) => {
-  console.log('event :', event);
-    console.log("handle change")
-    let data
-    try {
-      data = JSON.parse(event.target.value)
-    } catch (error) {
-      data = {}
-    }
+  const handleChangeData = (data) => {
     setData(data)
-    console.log('data :', data);
-    console.log('ReactDOMServer :', ReactDOMServer.renderToString(renderTable));
   }
-  const [data, setData] = useState({
+
+  const [data, setData] = useState(`{
     "id": "0001",
     "type": "donut",
     "name": "Cake",
@@ -42,25 +34,49 @@ export const App = () => {
         { "id": "5003", "type": "Chocolate" },
         { "id": "5004", "type": "Maple" }
       ]
-  })
-  const renderTable = (
-    <JSONToHTMLTable data={data} tableClassName="table table-condensed table-sm" />
-  )
+  }`)
+
+  useEffect(() => {
+  }, [])
+  const renderTable = () => {
+    console.log("render")
+    try {
+      return <JSONToHTMLTable data={JSON.parse(data)} tableClassName="table table-condensed table-sm" />
+    } catch (error) {
+      return <div>Error in JSON</div>
+    }
+  }
+
+  const options = {
+    height: "70px",
+    width: "100%",
+    theme: "ambiance",
+    lineNumbers: true,
+    styleActiveLine: true,
+    textWrapping: true,
+    mode: "javascript",
+  }
 
   return (
     <div className="container">
-        <h1 class="text-center">
-          Json to HTML Table Converter - Online tool
+        <h1 className="text-center">
+        JSON to HTML Table Converter - Online tool
       </h1>
+      <p className="text-center">
+        <a target="_blank" rel="noreferrer" href="https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html">Sample JSON</a>
+      </p>
+      <br/>
       <div className='pt-2 pb-2'>
-        <textarea
-          defaultValue={JSON.stringify(data)}
-          onChange={handleChangeData}
-          placeholder="Write or paste your code here..."
-          className="text-md" id="textarea-code" cols="30" rows="10"></textarea>
+        <CodeMirror value={data} onChange={handleChangeData} options={options} />
         <br/>
+        <pre className="selectable prettyprint">
+          {ReactDOMServer.renderToString(renderTable())}
+        </pre>
         <br/>
-        {renderTable}
+        <pre className="prettyprint bg-white shadow-sm p-20"
+          dangerouslySetInnerHTML={{
+                    __html: ReactDOMServer.renderToString(renderTable())
+        }}></pre>
       </div>
     </div>
   )

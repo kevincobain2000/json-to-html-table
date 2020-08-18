@@ -1,6 +1,6 @@
-/* @import '~highlight.js/styles/default.css';
 @import '~codemirror/lib/codemirror.css';
-@import '~codemirror/theme/ambiance.css'; */
+@import '~codemirror/theme/ambiance.css';
+
 *,
 *::before,
 *::after {
@@ -374,6 +374,9 @@ textarea {
 	padding: 3px 10px;
 }
 .CodeMirror {
+  font-family: 'Inconsolata', monospace;
+}
+.monospace {
   font-family: 'Inconsolata', monospace;
 }
 .selectable{
@@ -842,4 +845,11 @@ table th, table td {
   border-right:1px solid #dee2e6;
   border-bottom:1px solid #dee2e6;
   background: white;
+}
+.bg-white {
+  background: white;
+  border: 0px !important;
+}
+.p-20 {
+  padding: 20px !important;
 }
