@@ -39,7 +39,6 @@ export const App = () => {
   useEffect(() => {
   }, [])
   const renderTable = () => {
-    console.log("render")
     try {
       return <JSONToHTMLTable data={JSON.parse(data)} tableClassName="table table-condensed table-sm" />
     } catch (error) {
