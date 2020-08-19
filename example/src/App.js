@@ -65,6 +65,11 @@ export const App = () => {
       <p className="text-center">
         <a target="_blank" rel="noreferrer" href="https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html">Sample JSON</a>
       </p>
+      <p className="text-center">
+          <a className="text-center" href="https://medium.com/web-developer/convert-nested-json-to-html-table-react-javascript-be6611fed718">
+            Medium - Convert Nested JSON to HTML Table — React, Javascript
+          </a>
+      </p>
       <br/>
       <div className='pt-2 pb-2'>
         <CodeMirror value={data} onChange={handleChangeData} options={options} />
