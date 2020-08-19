@@ -60,7 +60,7 @@ export const App = () => {
   return (
     <div className="container">
         <h1 className="text-center">
-        JSON to HTML Table Converter - Online tool
+        Nested JSON to HTML Table Converter - Online tool
       </h1>
       <p className="text-center">
         <a target="_blank" rel="noreferrer" href="https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html">Sample JSON</a>
