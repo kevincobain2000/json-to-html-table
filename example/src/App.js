@@ -83,10 +83,7 @@ export const App = () => {
           {ReactDOMServer.renderToString(renderTable())}
         </pre>
         <br/>
-        <pre className="prettyprint bg-white shadow-sm p-20"
-          dangerouslySetInnerHTML={{
-                    __html: ReactDOMServer.renderToString(renderTable())
-        }}></pre>
+        {renderTable()}
       </div>
     </div>
   )
