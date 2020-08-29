@@ -109,11 +109,14 @@ kbd {
   font-size: 85%;
 }
 pre {
-  padding: 1rem 1.4rem;
+  /* padding: 1rem 1.4rem; */
   max-width: 100%;
-  overflow: auto;
+  max-height: 300px;
+  overflow: scroll;
   border-radius: 4px;
   background: hsl(210, 28%, 93%);
+  border: 2px solid lightgray;
+  margin:0px;
 }
 pre code {
   font-size: 95%;

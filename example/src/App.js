@@ -46,6 +46,26 @@ export const App = () => {
     }
   }
 
+  const format = (html) => {
+    var tab = '  ';
+    var result = '';
+    var indent= '';
+
+    html.split(/>\s*</).forEach(function(element) {
+        if (element.match( /^\/\w/ )) {
+            indent = indent.substring(tab.length);
+        }
+
+        result += indent + '<' + element + '>\r\n';
+
+        if (element.match( /^<?\w[^>]*[^\/]$/ )) {
+            indent += tab;
+        }
+    });
+
+    return result.substring(1, result.length-3);
+  }
+
   const options = {
     height: "70px",
     width: "100%",
@@ -72,17 +92,15 @@ export const App = () => {
             Github
         </a>
       </p>
-      <br/>
-      <p className="text-center">
-        <a target="_blank" rel="noreferrer" href="https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html">Sample JSON</a>
-      </p>
+      <p>Enter JSON</p>
       <div className='pt-2 pb-2'>
         <CodeMirror value={data} onChange={handleChangeData} options={options} />
         <br/>
-        <pre className="selectable prettyprint">
-          {ReactDOMServer.renderToString(renderTable())}
+        <p>Raw HTML</p>
+        <pre className="selectable">
+          {format(ReactDOMServer.renderToString(renderTable()))}
         </pre>
-        <br/>
+        <p>HTML Table</p>
         {renderTable()}
       </div>
     </div>
