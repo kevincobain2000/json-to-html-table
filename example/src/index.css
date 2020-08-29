@@ -842,6 +842,7 @@ table td:first-child {
   color: black;
   background:#f5f5f500;
   text-transform: capitalize;
+  width:20%;
 }
 .table th, .table td {
   border-top: 1px solid #bcbcbc;
