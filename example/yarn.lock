@@ -2,9 +2,10 @@
 # yarn lockfile v1
 
 
-"@kevincobain2000/json-to-html-table@link:..":
-  version "0.0.0"
-  uid ""
+"@kevincobain2000/json-to-html-table@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kevincobain2000/json-to-html-table/-/json-to-html-table-1.0.1.tgz#86dfaf5445de0cc9ca78bdd54d275e45cb24daa3"
+  integrity sha512-s17VDsNvwAlPhE3wZ6BnKH7pi47mlGCltFfwIQ/9xBkeeBkYdT3A1LhhnpL4jof319wOqD9PrkUb8dP3OCIjbw==
 
 abab@^1.0.3:
   version "1.0.4"

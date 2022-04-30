@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "@kevincobain2000/json-to-html-table": "link:..",
+    "@kevincobain2000/json-to-html-table": "^1.0.1",
     "bootstrap": "^4.5.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -14,6 +14,7 @@
     "react-scripts": "^1.1.4"
   },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "postbuild": "rm -rf ../docs/* && mv build/* ../docs/",
